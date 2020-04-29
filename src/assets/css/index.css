@@ -1,0 +1,24 @@
+@import url(https://fonts.googleapis.com/css2?family=Lato&display=swap);
+
+:root {
+    --anchor-textColor: #228b22;
+}
+
+* {
+    box-sizing: content-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+a { text-decoration: none; color: var(--anchor-textColor) }
+
+#app {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    min-height: 300px;
+    align-items: center;
+}
