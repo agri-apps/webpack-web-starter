@@ -1,11 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        [x-cloak] { display: none; }
+        button.link {
+            display: none;
+            outline: none;
+        }
+    </style>
 </head>
+
 <body>
-    <div id="app"></div>
+    <header>
+        <nav class="pa3 pa4-ns">
+            <a class="nav-link dim black b f6 f5-ns dib mr3" href="#!" title="Home">Webpack + HTML</a>
+            <a class="nav-link dim gray    f6 f5-ns dib mr3" href="#!" title="Home">Home</a>
+            <a class="nav-link dim gray    f6 f5-ns dib mr3" href="#!/about" title="About">About</a>           
+        </nav>
+    </header>
+    <div id="content" class="px3 px4-ns"></div>
 </body>
+
 </html>

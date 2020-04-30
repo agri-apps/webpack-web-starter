@@ -1,0 +1,19 @@
+<div>
+    <h1>About Us</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum cupiditate possimus vitae, distinctio eligendi delectus ullam. Eaque, aliquid porro voluptate vitae distinctio fugiat dolores officiis reprehenderit numquam dolore quod minus.</p>
+    <% if (!this.subscribed) { %>
+        <form>
+        <input type="email" placeholder="Email" data-bind="email" required value="<%this.email%>" />
+        <button type="submit" data-refresh data-bind="subscribed" data-event="click" data-value="true" data-type="bool" data-validation="subscriber">Subscribe</button>
+        </form>
+        <% if (this.subscribeError) { %>
+            <p class="error"><%this.subscribeError%></p>
+        <% } %>
+    <% } else { %>
+    <p>Thanks for signing up!</p>
+    <p><%this.email%></p>
+    
+    <button data-refresh data-bind="subscribed" data-event="click" data-value="false" data-type="bool">Unsubscribe</button>
+    <% } %>
+    <p>Displayed at <%this.time%></p>
+</div>

@@ -2,23 +2,95 @@
 
 :root {
     --anchor-textColor: #228b22;
+    --anchor-hoverTextColor: #104510;
+
+    --gray: #777;
+    --black: #000;
 }
 
 * {
     box-sizing: content-box;
 }
+
 html, body {
     margin: 0;
     padding: 0;
     font-family: 'Lato', sans-serif;
 }
 
+/* Content */
+#content > :first-child {
+    transition: all .3s;
+}
+
+/* Links */
+
 a { text-decoration: none; color: var(--anchor-textColor) }
 
-#app {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    min-height: 300px;
-    align-items: center;
+.nav-link {
+    color: var(--gray);
+    display: inline-block;
+    text-decoration: none;
+    transition: color .15s ease-in;    
+}
+
+.nav-link:link, .link:visited {
+    transition: color .15s ease-in;
+}
+
+.nav-link:hover {
+    transition: color .15s ease-in;
+}
+
+.nav-link:active {
+    transition: color .15s ease-in;
+}
+
+.nav-link:focus {
+    transition: color .15s ease-in;
+    outline: 1px dotted currentColor;
+}
+
+button.link {
+    background: none;
+    border: none;
+    color: var(--anchor-textColor);
+    font-size: 1em;
+    cursor: pointer;
+    display: inline;    
+}
+button.link:hover {
+    color: var(--anchor-hoverTextColor);
+}
+
+/* Fonts */
+.f6 {
+    font-size: .875rem;
+}
+.b {
+    font-weight: bold;
+}
+
+@media screen and (min-width: 30em) {
+    .f5-ns {
+        font-size: 1rem;
+    }
+}
+
+/* Spacing */
+.pa3 { padding: 1rem; }
+.px3 { padding-left: 1rem; padding-right: 1rem; }
+.mr3 {
+    margin-right: 1rem;
+}
+
+
+@media screen and (min-width: 30em) {
+    .pa4-ns {
+        padding: 2rem;
+    }
+    .px4-ns {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
 }

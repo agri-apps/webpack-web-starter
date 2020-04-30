@@ -25,6 +25,12 @@ module.exports = {
           loader: 'babel-loader',
         },
       },
+      {
+        test: /\.html$/i,
+        use: {
+          loader: 'html-loader'
+        }
+      },
     ]
   }
 }
